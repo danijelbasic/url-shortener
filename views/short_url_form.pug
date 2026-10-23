@@ -1,0 +1,28 @@
+extends layout
+
+block content
+
+    div.container.w-75.mt-4
+        form(method='POST')
+            div.form-group
+                label(for='name')
+                    i.bi.bi-link-45deg
+                    | &nbsp;Long URL
+                input#name.form-control(type='text', placeholder='Enter long URL'
+    name='originalUrl' required value=(undefined === urlMapping ? '' : urlMapping.originalUrl))
+            button.btn.btn-primary(type='submit')
+                i.bi.bi-scissors
+                |  Shorten URL
+
+        div.shortening-outcome
+            if urlMapping
+                if exists
+                    div.alert.alert-warning(role='alert') Short URL already exists for the given URL:&nbsp;
+                        a(href=urlMapping.shortUrl, target='_blank') !{urlMapping.shortUrlWithDomain}
+                else
+                    div.alert.alert-primary(role='alert') Short URL has been created:&nbsp;
+                        a(href=urlMapping.shortUrl, target='_blank') !{urlMapping.shortUrlWithDomain}
+        if errors
+            ul
+              for error in errors
+                  li!= error.msg

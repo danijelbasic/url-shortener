@@ -1,0 +1,28 @@
+extends layout
+
+block styles
+  link(rel='stylesheet', href="https://cdn.datatables.net/v/dt/dt-3.1.4/datatables.min.css")
+block scripts
+  script(src="https://cdn.datatables.net/v/dt/dt-3.1.4/datatables.min.js", defer)
+  script(src="/javascripts/mappings.js" defer)
+
+block content
+
+  div(class="container mt-4")
+    table(id="mappings", class="table table-striped table-bordered table-hover", style="width:100%")
+      thead
+        tr
+          th Short URL
+          th Original URL
+          th Clicks
+          th Created At
+          th Remove?
+      tbody
+
+  template(id="link-template")
+    a(href="#", class="link" target="_blank")
+
+  template(id="delete-action-template")
+    button(type="button", class="btn btn-danger", data-id="")
+      i.bi.bi-trash
+

@@ -51,8 +51,6 @@ based Sliding Window Counter algorithm.
 
 ## Screenshots
 
-Mappings list
-
 ![Mappings](./public/images/mappings.png)
 ![Mapping search](./public/images/mapping_search.png)
 ![Mapping exists](./public/images/mapping_exists.png)

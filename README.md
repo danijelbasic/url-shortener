@@ -57,4 +57,7 @@ Mappings list
 ![Mapping search](./public/images/mapping_search.png)
 ![Mapping exists](./public/images/mapping_exists.png)
 ![Mapping created](./public/images/mapping_created.png)
+![Mapping confirm_removal](./public/images/mapping_confirm_removal.png)
+![Mapping deleted](./public/images/mapping_deleted.png)
+
 

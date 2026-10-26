@@ -91,6 +91,7 @@ $(document).ready(function() {
         type: 'DELETE',
         success: function(result) {
           console.log(`Removal outcome: success=${result.success}, message=${result.message}`);
+          alert(result.message);
           const table = $mappingsTable.DataTable();
           const rowsOnCurrentPage = table.rows({ page: 'current' }).count();
           const currentPage = table.page();
@@ -103,6 +104,7 @@ $(document).ready(function() {
           }
         },
         error: function(xhr, status, error) {
+          alert(`Error deleting mapping: ${error}`);
           console.error(`Error deleting mapping: ${error}`);
         }
       });
